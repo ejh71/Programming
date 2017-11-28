@@ -36,7 +36,7 @@ public interface IIntPoint2D {
      * Determines if this point is the same as another (i.e. x1=x2 and y1=y2)
      * @returns true if this point is the same as point o
      */
-    public boolean equals(Object o);
+    public boolean equals(IIntPoint2D o);
     /**
      * Hashcode to support some standard library data structures
      * formula: (x<<16)+y
