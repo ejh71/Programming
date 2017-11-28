@@ -9,8 +9,7 @@ public class IntPoint2D implements IIntPoint2D {
      */
 	int X;
 	int Y;
-	int answer;
-	int difference;
+
 	
 	public IntPoint2D(int Xvalue, int Yvalue) {
 		X = Xvalue;
