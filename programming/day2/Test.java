@@ -13,7 +13,7 @@ public class Test {
         //      lower right x
         //      lower right y
         //      a fill value for all grid cells
-        IntGrid2D ttt = new IntGrid2D(-1,1,1,-1,'o');
+        IntGrid2D ttt = new IntGrid2D(-1,1,1,-1,' ');
         
         IIntPoint2D p1 = new IntPoint2D(0,0);
         ttt.setPoint(p1,'X');

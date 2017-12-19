@@ -3,31 +3,32 @@
  */
 public class IntPoint2D implements IIntPoint2D {
 	
-	/**
-     * @return assign and return the x value from the ordered pair     
-     * 
-     */
 	int X;
 	int Y;
-
 	
+	/**
+     * Constructor that takes in an x and y integer
+     */
 	public IntPoint2D(int Xvalue, int Yvalue) {
 		X = Xvalue;
 		Y = Yvalue;
 	}
 
-    public int  getX() {
+	 /**
+     * @returns the X coordinate
+     */
+    public int getX() {
     	
-      /* returns X coordinate
-       */
-        return X;  }
-    
+    	return X;
+    }
+    /**
+     * @returns the Y coordinate
+     */
     public int getY() {
-   
-      /* returns Y coordinate
-       */
-      return Y; }
-   
+    	
+    	return Y;
+    }
+	   
     /**
      * Computes the manhattan distance to another point. 
      * formula: abs(x1-x2) + abs(y1-y2)
@@ -73,17 +74,10 @@ public class IntPoint2D implements IIntPoint2D {
      * @returns true if this point is the same as point o
      */
     public boolean equals(IIntPoint2D o) {
-    	if(o.getX() == this.X)  
-    		
+    	if(o.getX() == this.X && o.getY() == this.Y) {return true;}    	
     	
-    	if(o.getY() == this.Y)  
-    		
+    	else {return false;}
     	
-    		return true;
-    	
-    	else;
-    	
-    		return false;
     }
     /**
      * Hashcode to support some standard library data structures
@@ -95,4 +89,24 @@ public class IntPoint2D implements IIntPoint2D {
     	
     	return hash;
     } 
+
+     public static void main(String[] argv) {
+    	 
+    	 IntPoint2D point = new IntPoint2D(2, 2);
+    	 IntPoint2D dot = new IntPoint2D(2, 2);
+    	 
+    	 System.out.println(point.getX());
+    	 System.out.println(point.getY());
+    	 System.out.println(point.toString());
+    	 System.out.println(point.distance(dot));
+    	 System.out.println(point.manhattanDistance(dot));
+    	 System.out.println(point.equals(dot));
+     }
+     
+
 }
+
+
+
+
+
