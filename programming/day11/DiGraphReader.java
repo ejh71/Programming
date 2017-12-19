@@ -43,7 +43,7 @@ public class DiGraphReader implements IGraphReader {
         //New file reader
         BufferedReader brs=new BufferedReader(new FileReader(filename));
         //Loop through lines 
-    	for(int i=0; i<rows; i++) {
+    	for(int i=0; i<rows*2; i+=2) {
             l=brs.readLine();
       //  System.out.println(l);
     	// Parse the lines. If a line does not have exactly 3 fields, ignore the line
@@ -54,16 +54,18 @@ public class DiGraphReader implements IGraphReader {
     	String part3 = parts[2];
     	double weight = (Double.parseDouble(part3));
     	
-    	// For each line, add the nodes and edge
+    	// For each line, add the nodes and edge		DIDNT MAKE IT SO THAT IT CHECKS FOR EXISTING NODES
+    	
     	r.addNode(part1);
     	r.addNode(part2);
     	array = r.getNodeSet();
-    	r.addEdge(array[0], array[1], weight);
+    	r.addEdge(array[i], array[i+1], weight);
     	}
 
         // Return the graph instance
         return r;
     	}
+    
     
     
     /**
